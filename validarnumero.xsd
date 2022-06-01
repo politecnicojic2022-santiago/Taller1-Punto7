@@ -1,0 +1,17 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="validarnumero">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cantidad" minOccurs="1" maxOccurs="1" type="treintanumerovalidar">
+                    
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="treintanumerovalidar">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="-30"></xs:minInclusive>
+            <xs:maxInclusive value="30"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
